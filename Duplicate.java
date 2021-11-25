@@ -1,4 +1,4 @@
-/*searching an element in given array(preferably finding first occurence)*/
+/*Count of Duplicates*/
 import java.util.Scanner;
 public class Duplicate
 {
@@ -6,31 +6,33 @@ public class Duplicate
     {
         Scanner input = new Scanner(System.in);
         String flag="true";
-        int a[]=new int[30],n,element,count=0,i,j,k,elm;
+        int a[]=new int[30],n,element,count=0,i,j,k,arr_elem;  // All declarations,intializations.
         System.out.println("enter n");
-        n=input.nextInt();
-        System.out.println("elements");
+        n=input.nextInt(); //inputing array size
+        System.out.println("elements"); 
         for(i=0;i<n;i++)
         {
-            a[i]=input.nextInt();
+            a[i]=input.nextInt(); //inputting array elements
         }
-        for(i=1;i<n;i++)
+        //Alogorithm Operation finding count of duplicates
+        for(i=0;i<n;i++)
         {
-            elm=a[i];
+            arr_elem=a[i];
             for(j=0;j<i;j++)
             {
-                if(elm==a[j])
+                if(arr_elem==a[j])
                 {
                     flag="false";
                 }
             }
             if(flag=="true")
             {
-                for(k=i+1;k<n-1;k++)
+                for(k=i+1;k<n;k++)
                 {
-                    if(elm==a[k])
+                    if(arr_elem==a[k])
                     {
-                        count+=1;                        
+                        count+=1; 
+                        break;              
                     }
                 }
             }
@@ -40,6 +42,6 @@ public class Duplicate
                 continue;
             }
         }
-        System.out.println(count+1);
+        System.out.println(count+" are the number of duplicates"); //Prints count of duplicates
     }
 }
