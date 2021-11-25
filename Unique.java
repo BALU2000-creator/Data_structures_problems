@@ -14,7 +14,7 @@ public class Unique
         {
             a[i]=input.nextInt(); //inputting array elements
         }
-        //Alogorithm Operation finding count of duplicates
+        //Alogorithm Operation finding count of Uniques
         for(i=0;i<n;i++)
         {
             arr_elem=a[i];
